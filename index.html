@@ -20,10 +20,10 @@
             <div>
                 <ul>
                     <li v-for="(item, index) in toDoList" :class="(item.done) ? 'sbarrato' : ''" @click="onOffClick(index)">
-                        {{item.text}}
+                        <span>X</span> {{item.text}}
                     </li>
-                    <input type="text">
-                    <button @click="">Invia</button>
+                    <input v-model="toDoList.text" type="text">
+                    <button @click="inviaText">Invia</button>
                 </ul>
             </div>
         </main>
