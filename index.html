@@ -19,12 +19,15 @@
         <main>
             <div>
                 <ul>
-                    <li v-for="(item, index) in toDoList" :class="(item.done) ? 'sbarrato' : ''" @click="onOffClick(index)">
-                        <span>X</span> {{item.text}}
+                    <li v-for="(item, index) in toDoList" >
+                        <span @click="onOffClick(index)" :class="(item.done) ? 'sbarrato' : ''">{{item.text}}</span>
+                        <i @click="removeTask(index)">X</i>
                     </li>
-                    <input v-model="toDoList.text" type="text">
-                    <button @click="inviaText">Invia</button>
                 </ul>
+            </div>
+            <div>
+                <input type="text" v-model="newTaskContent" @keyup.enter="addTask(newTaskContent)">
+                <button @click="addTask(newTaskContent)">Invia</button>
             </div>
         </main>
     </div>
