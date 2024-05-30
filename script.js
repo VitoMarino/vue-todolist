@@ -9,7 +9,7 @@ createApp({
             }, 
             {
                 text: 'Carote',
-                done: true
+                done: false
             },
             {
                 text: 'Formaggio',
@@ -24,12 +24,16 @@ createApp({
             this.toDoList[oggettoIndex].done = !this.toDoList[oggettoIndex].done
         },
         addTask: function (passaggio) {
+            if (passaggio.trim().length > 0) {
                 const newTask = {
                     text: passaggio.trim(),
                     done: false,
                 }
                 this.toDoList.push(newTask);
                 this.clearNewTaskInput();
+            } else {
+                console.log('Non hai inserito nulla!')
+            }
             },
         clearNewTaskInput: function() {
             this.newTaskContent = '';

@@ -4,18 +4,58 @@
     box-sizing: border-box;
 }
 
-ul > li {
-    list-style: none;
+body {
+    font-family: Roboto;
 }
 
-header > h2 {
+header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
     text-align: center;
+    font-size: 3rem;
+    background-color: #0d6efd;
+    color: white;
+    text-transform: uppercase;
 }
 
 main {
-    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: aqua;
+    padding: 5rem;
+}
+
+ul {
+    padding: 3rem;
+}
+
+ul > li {
+    list-style: none;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: .5px solid black;
+    border-radius: .2rem;
+    padding: .4rem;
 }
 
 .sbarrato {
     text-decoration: line-through;
+}
+
+div.auto {
+    text-align: center;
+}
+
+button {
+    background-color: #0d6efd;
+    color: white;
+    padding: .4rem;
+    border-radius: .5rem;
+    border-style: none;
+    margin-left: .2rem;
 }
