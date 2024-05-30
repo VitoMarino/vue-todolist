@@ -3,3 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+ul > li {
+    list-style: none;
+}
+
+header > h2 {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+.sbarrato {
+    text-decoration: line-through;
+}
