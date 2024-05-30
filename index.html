@@ -19,7 +19,7 @@
         <main>
             <div>
                 <ul>
-                    <li @click="" v-for="(item, index) in toDoList" :class="item.done ? '' : 'sbarrato' ">
+                    <li v-for="(item, index) in toDoList" :class="(item.done) ? 'sbarrato' : ''" @click="onOffClick(index)">
                         {{item.text}}
                     </li>
                     <input type="text">

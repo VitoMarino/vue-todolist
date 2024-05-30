@@ -5,19 +5,21 @@ createApp({
         return {
             toDoList : [{
                 text: 'Patate',
-                done: 'false'
+                done: false
             }, 
             {
                 text: 'Carote',
-                done: 'true',
+                done: true
             },
             {
                 text: 'Formaggio',
-                done: 'false'
+                done: false
             }]
         }
     },
     methods: {
-        
+        onOffClick: function(oggettoIndex) {
+            this.toDoList[oggettoIndex].done = !this.toDoList[oggettoIndex].done
+        }
     }
 }).mount('#app')
